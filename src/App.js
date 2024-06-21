@@ -47,6 +47,7 @@ function App() {
                     var data = element.data();
                     arr =[...arr , data];
                 });
+                arr.sort((a,b) => a.id-b.id);
                 setData(arr);
             }).catch((err)=> console.log(err));
   },[]);
