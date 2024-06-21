@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.textcolor
+{
+    /* font-size: 48px; */
+    background: linear-gradient(to right, #B5179E, #7209B7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+}
+.containercolor{
+    background-color: #1D1D1D;
+}
+.image
+{
+    height: 58px;
+    width: 58px;
+    /* border: 1px solid red; */
+    border: 2px solid;
+    border-image: linear-gradient(to right, #B5179E, #7209B7) 1;
+    fill: white;
+    /* border-radius: 10px; */
+}
+.background
+{
+    background: linear-gradient(to right, #B5179E, #7209B7);
+}
