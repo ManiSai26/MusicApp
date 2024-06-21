@@ -1,6 +1,4 @@
-import { doc, getDoc } from 'firebase/firestore';
 import './App.css';
-import List from "./data";
 import db from "./firebase";
 import {useEffect, useRef, useState} from 'react';
 // import Play from './assets/play-button.svg';
@@ -12,7 +10,7 @@ function App() {
   const [duration, setDuration] = useState(0);
   const[data,setData] = useState([]);
   useEffect(()=>{
-    if(current!=0)
+    if(current!==0)
       {
         var res ="";
         data.forEach((elem)=>{
@@ -32,8 +30,7 @@ function App() {
       }
   },[current]);
   useEffect(()=>{
-    // console.log(current);
-    if(current!=0)
+    if(current!==0)
       {
         setTimeout(()=>{setCurrentTime(audioRef.current.currentTime);},1000);
       }
@@ -61,7 +58,7 @@ function App() {
          {elem.id}
         </div>
         <div className='mr-16'>
-          <img className='image' src={elem.artwork}/>
+          <img className='image' src={elem.artwork} alt='image'/>
         </div>
         <div className='textcolor text-5xl mr-80'>
           <span>{elem.title}</span>
